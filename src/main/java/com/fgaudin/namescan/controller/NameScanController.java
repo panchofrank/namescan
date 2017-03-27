@@ -1,5 +1,6 @@
 package com.fgaudin.namescan.controller;
 
+import com.fgaudin.namescan.domain.Person;
 import com.fgaudin.namescan.domain.PersonResult;
 
 
@@ -23,7 +24,7 @@ public class NameScanController {
     private static final Logger LOGGER = LoggerFactory.getLogger(NameScanController.class);
 
     @RequestMapping(path = "/search")
-    List<PersonResult> search(@RequestParam String query) {
+    List<Person> search(@RequestParam String query) {
         LOGGER.debug("search >>>");
         return service.search("frank");
 
