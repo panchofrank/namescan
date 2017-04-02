@@ -16,7 +16,7 @@ import java.util.List;
  * TODO - move this to an integration test project
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(properties={"spring.data.mongodb.host=127.0.0.1"})
 public class PersonRepositoryIntegrationTest {
 
     @Autowired
