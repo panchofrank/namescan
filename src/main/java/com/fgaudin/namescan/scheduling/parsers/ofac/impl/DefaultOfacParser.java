@@ -61,9 +61,7 @@ public class DefaultOfacParser implements OfacParser {
                 LOGGER.debug("At node {}", nodeName);
                 if (TAG_ENTRY.equals(nodeName)) {
                     Optional<Person> person = resolvePersonFromNode(node);
-                    if (person.isPresent()) {
-                        persons.add(person.get());
-                    }
+                    person.ifPresent(persons::add);
                 } else if (TAG_PUBLISH_INFORMATION.equals(nodeName)) {
                     if (metaData != null) {
                         throw new RuntimeException("Found more than one metadata tag!");
@@ -124,13 +122,19 @@ public class DefaultOfacParser implements OfacParser {
                 }
             }
         }
+        return createMetaData(count, date);
 
-        PublicationInformation metaData = new PublicationInformation();
-        metaData.setCount(count);
-        metaData.setPublicationDate(date);
-        return metaData;
+
     }
 
+    private PublicationInformation createMetaData(Integer count, LocalDate date) {
+        PublicationInformation metaData = new PublicationInformation();
+        metaData.setCount(count);
+
+        metaData.setPublicationDate(date);
+        return metaData;
+
+    }
     private Integer resolveCountFromPublicationNode(Node node) {
         String countStr = node.getTextContent();
         try {

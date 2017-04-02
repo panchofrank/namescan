@@ -7,5 +7,5 @@ import org.springframework.core.io.Resource;
 import java.util.List;
 
 public interface OfacParser {
-    public List<Person> parse(Resource resource);
+    List<Person> parse(Resource resource);
 }

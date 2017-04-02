@@ -22,6 +22,7 @@ public class PersonRepositoryIntegrationTest {
     @Autowired
     private PersonRepository repository;
 
+    // TODO
     @Test
     public void test() {
         Person person = new Person();
@@ -31,7 +32,7 @@ public class PersonRepositoryIntegrationTest {
         Person savedPerson = repository.save(person);
         Assert.assertNotNull(savedPerson);
         List<Person> personList = repository.findAll();
-        Assert.assertTrue(personList.size() > 1);
+        Assert.assertTrue(personList.size() >= 1);
         repository.delete(savedPerson);
     }
 }

@@ -38,7 +38,7 @@ public class ImportDataTasks {
 
         repository.deleteAll();
         List<Person> personList = ofacParser.parse(ofacResource);
-        personList.stream().forEach(repository::save);
+        repository.save(personList);
     }
 
 }

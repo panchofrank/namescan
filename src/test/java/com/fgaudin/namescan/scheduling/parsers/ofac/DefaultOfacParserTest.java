@@ -18,13 +18,14 @@ public class DefaultOfacParserTest {
     @Autowired
     private ResourceLoader resourceLoader;
 
+    // TODO
     @Test
     public void test() {
 
         DefaultOfacParser parser = new DefaultOfacParser();
         Resource resource = resourceLoader.getResource("ofac/sdn.xml");
         List<Person> personList = parser.parse(resource);
-        personList.stream().forEach(x -> System.out.println(x));
+        personList.forEach(System.out::println);
 
     }
 }
