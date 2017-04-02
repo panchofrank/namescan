@@ -1,7 +1,11 @@
 version: 2
 jobs:
   build:
-    test:
-      post:
-        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-        - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    steps:
+      - run:
+          name: Tests make report directory
+          command: mkdir -p $CIRCLE_TEST_REPORTS/junit/
+        
+      - run:
+          name: Find reports and copy to results directory
+          command: find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
