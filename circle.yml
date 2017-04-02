@@ -1,4 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker pull mongo
 test:
+  override:
+    - docker run mongo
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
