@@ -2,8 +2,6 @@ version: 2
 jobs:
   build:
     working_directory: /tmp
-    docker:
-      - image: 8-jdk 
     steps:
       - run:
           name: Tests make report directory
