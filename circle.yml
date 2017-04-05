@@ -10,7 +10,7 @@ deployment:
   production:
     branch: master
     commands:
-      - scp target/*.jar circleci@217.182.204.236:/.
+      - scp -v target/*.jar circleci@217.182.204.236:/.
   staging:
     branch: develop
     heroku:
