@@ -2,6 +2,11 @@ machine:
   database:
     override:
       - mongodb
+
+# Circleci needs this to resolve dependencies in a multi module project
+dependencies:
+  override:
+    - mvn install -DskipTests
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
