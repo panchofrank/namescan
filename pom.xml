@@ -6,7 +6,15 @@
 	<groupId>com.fgaudin.namescan</groupId>
 	<artifactId>name-scan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>persistence</module>
+		<module>domain</module>
+		<module>services</module>
+		<module>controllers</module>
+		<module>application</module>
+		<module>scheduling</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>namescan</name>
 	<description></description>
@@ -28,6 +36,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -62,7 +71,7 @@
 			<version>${apache.commons-lang3.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.commons</groupId>
+			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>${apache.commons-io.version}</version>
 		</dependency>
@@ -73,12 +82,5 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+
 </project>
