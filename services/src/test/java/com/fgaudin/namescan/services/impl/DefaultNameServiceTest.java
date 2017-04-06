@@ -31,7 +31,7 @@ public class DefaultNameServiceTest {
         person.setFirstName("François");
         listPersons.add(person);
         Mockito.when(repository.findAll()).thenReturn(listPersons);
-        List<Person> results = service.search("frank");
+        List<Person> results = service.search("frank", "smith");
         Assert.assertTrue(results.size() == 1);
         Assert.assertEquals("François", results.get(0).getFirstName());
     }

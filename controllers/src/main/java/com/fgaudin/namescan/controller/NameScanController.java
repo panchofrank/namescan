@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@Api(value="namescan", description="Operations for getting information on persons")
+@Api(value="com.fgaudin.namescan", description="Operations for getting information on persons")
 public class NameScanController {
 
     @Autowired
@@ -29,9 +29,9 @@ public class NameScanController {
     //TODO Paging
     @ApiOperation(value = "View a list of matching persons", response = List.class, produces = "application/json")
     @RequestMapping(path = "/search", method = RequestMethod.GET)
-    List<Person> search(@RequestParam String query) {
+    List<Person> search(@RequestParam String firstName, @RequestParam String lastName) {
         LOGGER.debug("search >>>");
-        return service.search("frank");
+        return service.search(firstName, lastName);
 
     }
 }

@@ -42,8 +42,8 @@ public class NameScanControllerTest {
 
     @Test
     public void testSearch_with_valid_query() throws Exception {
-        given(this.service.search("frank")).willReturn(generateTestResultList());
-        this.mvc.perform(get("/search?query=frank").accept(MediaType.APPLICATION_JSON))
+        given(this.service.search("frank", "smith")).willReturn(generateTestResultList());
+        this.mvc.perform(get("/search?firstName=frank&lastName=smith").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$[0].firstName", is("François")));

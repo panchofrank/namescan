@@ -6,5 +6,5 @@ import com.fgaudin.namescan.domain.Person;
 import java.util.List;
 
 public interface NameService {
-    List<Person> search(String query);
+    List<Person> search(String firstName, String lastname);
 }

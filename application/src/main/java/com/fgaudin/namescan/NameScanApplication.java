@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -15,6 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@ComponentScan(basePackages=  {"com.fgaudin.namescan"})
 @EnableScheduling
 @EnableSwagger2
 public class NameScanApplication {
@@ -46,7 +48,7 @@ public class NameScanApplication {
 				"REST API for details of people on watch list",
 				"1.0",
 				"Terms of service",
-				new Contact("Anonymos", "https://todo", "anonymous@todo"),
+				new Contact("François Gaudin", "https://todo", "anonymous@todo"),
 				"Apache License Version 2.0",
 				"https://www.apache.org/licenses/LICENSE-2.0");
 		return apiInfo;

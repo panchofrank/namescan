@@ -16,7 +16,7 @@
 	</modules>
 	<packaging>pom</packaging>
 
-	<name>namescan</name>
+	<name>com.fgaudin.namescan</name>
 	<description></description>
 
 	<parent>

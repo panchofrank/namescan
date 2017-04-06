@@ -19,10 +19,9 @@ public class DefaultNameService implements NameService {
     @Autowired
     private PersonRepository repository;
 
-    @Override
-    public List<Person> search(String query) {
-        LOGGER.info("search for {}", query);
-        List<Person> personList = repository.findAll();
+    public List<Person> search(String firstName, String lastName) {
+        LOGGER.info("search for {} {}", firstName, lastName);
+        List<Person> personList = repository.findByFirstNameIgnoreCaseAndLastNameIgnoreCase(firstName, lastName);
         LOGGER.debug("returning {} results", personList.size());
         return personList;
     }
