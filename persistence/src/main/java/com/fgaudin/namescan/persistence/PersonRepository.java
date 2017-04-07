@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface PersonRepository extends MongoRepository<Person, String> {
 
-    List<Person> findByFirstNameIgnoreCaseAndLastNameIgnoreCase(String firstNameQuery, String lastNameQuery);
+    List<Person> findByFirstNameLikeIgnoreCaseAndLastNameLikeIgnoreCase(String firstNameQuery, String lastNameQuery);
 
 }
 

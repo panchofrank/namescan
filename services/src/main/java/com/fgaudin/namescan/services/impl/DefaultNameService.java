@@ -21,7 +21,7 @@ public class DefaultNameService implements NameService {
 
     public List<Person> search(String firstName, String lastName) {
         LOGGER.info("search for {} {}", firstName, lastName);
-        List<Person> personList = repository.findByFirstNameIgnoreCaseAndLastNameIgnoreCase(firstName, lastName);
+        List<Person> personList = repository.findByFirstNameLikeIgnoreCaseAndLastNameLikeIgnoreCase(firstName, lastName);
         LOGGER.debug("returning {} results", personList.size());
         return personList;
     }

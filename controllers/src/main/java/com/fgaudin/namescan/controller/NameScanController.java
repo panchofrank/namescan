@@ -1,7 +1,6 @@
 package com.fgaudin.namescan.controller;
 
 import com.fgaudin.namescan.domain.Person;
-import com.fgaudin.namescan.domain.PersonResult;
 
 
 import com.fgaudin.namescan.services.NameService;

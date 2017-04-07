@@ -17,6 +17,8 @@ public class ImportDataTasks {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ImportDataTasks.class);
 
+    // TODO too manay dependencies - possible violation of single responsibility principle
+
     @Autowired
     private PersonRepository repository;
 
