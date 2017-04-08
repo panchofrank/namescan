@@ -97,8 +97,10 @@
         </plugins>
     </build>
     <scm>
+        <connection>scm:git:git@github.com:panchofrank/namescan.git</connection>
+        <url>scm:git:git@github.com:panchofrank/namescan.git</url>
         <developerConnection>scm:git:git@github.com:panchofrank/namescan.git</developerConnection>
-        <tag>HEAD</tag>
+       <!-- Is this necessary? <tag>HEAD</tag> -->
     </scm>
 
 </project>
