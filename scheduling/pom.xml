@@ -4,22 +4,21 @@
     <parent>
         <artifactId>name-scan</artifactId>
         <groupId>com.fgaudin.namescan</groupId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.2.0</version>
     </parent>
     <artifactId>scheduling</artifactId>
-  <version>0.2.0</version>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>com.fgaudin.namescan</groupId>
             <artifactId>domain</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.fgaudin.namescan</groupId>
             <artifactId>persistence</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
