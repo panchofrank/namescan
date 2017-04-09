@@ -13,12 +13,12 @@
         <dependency>
             <groupId>com.fgaudin.namescan</groupId>
             <artifactId>domain</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.fgaudin.namescan</groupId>
             <artifactId>persistence</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
