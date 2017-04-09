@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fgaudin.namescan</groupId>
@@ -8,13 +9,13 @@
     <packaging>pom</packaging>
 
     <name>com.fgaudin.namescan</name>
-    <description />
+    <description/>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.2.RELEASE</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <modules>
@@ -93,14 +94,20 @@
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
     <scm>
         <connection>scm:git:git@github.com:panchofrank/namescan.git</connection>
         <url>scm:git:git@github.com:panchofrank/namescan.git</url>
         <developerConnection>scm:git:git@github.com:panchofrank/namescan.git</developerConnection>
-       <!-- Is this necessary? <tag>HEAD</tag> -->
-    <tag>HEAD</tag>
-  </scm>
-
+        <tag>HEAD</tag>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>bintray-panchofrank-namescan</id>
+            <name>panchofrank-namescan</name>
+            <url>https://api.bintray.com/maven/panchofrank/namescan/name-scan-package/;publish=1</url>
+        </repository>
+    </distributionManagement>
 </project>
