@@ -17,7 +17,7 @@ import java.util.List;
  * TODO - move this to an integration test project
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties={"spring.data.mongodb.host=127.0.0.1"})  // TODO set different values for different profiles
+@SpringBootTest(properties={"spring.data.mongodb.host=172.17.0.2"})  // TODO set different values for different profiles
 @ContextConfiguration(classes={PersonRepository.class})
 @EnableAutoConfiguration
 public class PersonRepositoryIntegrationTest {
