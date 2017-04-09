@@ -4,7 +4,7 @@
     <parent>
         <artifactId>name-scan</artifactId>
         <groupId>com.fgaudin.namescan</groupId>
-        <version>0.0.3</version>
+        <version>0.0.4-SNAPSHOT</version>
     </parent>
 
     <artifactId>controllers</artifactId>
