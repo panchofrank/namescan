@@ -100,7 +100,6 @@
         <url>scm:git:git@github.com:panchofrank/namescan.git</url>
         <developerConnection>scm:git:git@github.com:panchofrank/namescan.git</developerConnection>
        <!-- Is this necessary? <tag>HEAD</tag> -->
-      <tag>name-scan-0.2.0</tag>
   </scm>
 
 </project>
