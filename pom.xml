@@ -4,7 +4,7 @@
 
     <groupId>com.fgaudin.namescan</groupId>
     <artifactId>name-scan</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>pom</packaging>
 
     <name>com.fgaudin.namescan</name>
@@ -100,7 +100,7 @@
         <url>scm:git:git@github.com:panchofrank/namescan.git</url>
         <developerConnection>scm:git:git@github.com:panchofrank/namescan.git</developerConnection>
        <!-- Is this necessary? <tag>HEAD</tag> -->
-      <tag>name-scan-0.2.0</tag>
+      <tag>name-scan-0.0.1</tag>
   </scm>
 
 </project>
