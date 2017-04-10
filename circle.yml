@@ -2,6 +2,11 @@ machine:
   database:
     override:
       - mongodb
+
+# Circleci needs this to resolve dependencies in a multi module project
+dependencies:
+  override:
+    - mvn install -DskipTests
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
@@ -10,7 +15,7 @@ deployment:
   production:
     branch: master
     commands:
-      - scp -v target/*.jar circleci@217.182.204.236:/home/circleci/.
+      - scp -v application/target/*.jar circleci@217.182.204.236:/home/circleci/.
   staging:
     branch: develop
     heroku:

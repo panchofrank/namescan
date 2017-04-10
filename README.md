@@ -1,1 +1,1 @@
-# namescan
+# com.fgaudin.namescan
