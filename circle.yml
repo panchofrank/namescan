@@ -2,15 +2,13 @@ machine:
   database:
     override:
       - mongodb
-  environment:
-      spring.profiles.active: intg
-
 
 # Circleci needs this to resolve dependencies in a multi module project
 dependencies:
   override:
     - mvn install -DskipTests
 test:
+  override: mvn integration-test "-Dspring.profiles.active=intg"
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
