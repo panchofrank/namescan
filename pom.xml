@@ -106,7 +106,7 @@
         <repository>
             <id>bintray-panchofrank-namescan</id>
             <name>panchofrank-namescan</name>
-            <url>https://api.bintray.com/maven/panchofrank/namescan/;publish=1</url>
+            <url>https://api.bintray.com/maven/panchofrank/namescan/bintray-package/;publish=1</url>
         </repository>
     </distributionManagement>
 </project>
