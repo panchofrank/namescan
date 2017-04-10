@@ -6,6 +6,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -17,10 +20,18 @@ import java.util.List;
  * TODO - move this to an integration test project
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(properties={"spring.data.mongodb.host=172.17.0.2"})  // TODO set different values for different profiles
 @ContextConfiguration(classes={PersonRepository.class})
 @EnableAutoConfiguration
 public class PersonRepositoryIntegrationTest {
+
+    @Configuration
+    @PropertySource( "person-repository-test-dev.properties")
+    static class LocalConfig {}
+
+    @Configuration
+    @Profile("intg")
+    @PropertySource( "person-repository-test-intg.properties")
+    static class IntgConfig {}
 
     @Autowired
     private PersonRepository repository;
