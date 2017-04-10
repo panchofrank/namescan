@@ -4,7 +4,7 @@
     <parent>
         <artifactId>name-scan</artifactId>
         <groupId>com.fgaudin.namescan</groupId>
-        <version>0.0.6-SNAPSHOT</version>
+        <version>0.0.6</version>
     </parent>
     <artifactId>services</artifactId>
     <packaging>jar</packaging>
