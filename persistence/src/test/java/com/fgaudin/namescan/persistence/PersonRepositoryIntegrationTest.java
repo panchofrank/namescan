@@ -25,6 +25,7 @@ import java.util.List;
 public class PersonRepositoryIntegrationTest {
 
     @Configuration
+    @Profile({"dev", "default"})
     @PropertySource( "person-repository-test-dev.properties")
     static class LocalConfig {}
 
