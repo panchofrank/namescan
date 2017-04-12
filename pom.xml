@@ -4,7 +4,7 @@
 
     <groupId>com.fgaudin.namescan</groupId>
     <artifactId>name-scan</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>com.fgaudin.namescan</name>
@@ -100,7 +100,7 @@
         <connection>scm:git:git@github.com:panchofrank/namescan.git</connection>
         <url>scm:git:git@github.com:panchofrank/namescan.git</url>
         <developerConnection>scm:git:git@github.com:panchofrank/namescan.git</developerConnection>
-        <tag>name-scan-0.1.0</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <repository>
