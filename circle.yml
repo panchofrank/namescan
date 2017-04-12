@@ -17,7 +17,7 @@ deployment:
   production:
     branch: master
     commands:
-      - scp -v application/target/*.jar circleci@217.182.204.236:/home/circleci/.
+      - scp -v application/target/*.jar circleci@217.182.204.236:/home/circleci/namescan.jar
   staging:
     branch: develop
     heroku:
